@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.lucas.fuelcalculator"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.lucas.fuelcalculator"
