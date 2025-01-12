@@ -13,19 +13,24 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Recuperar os componentes editText
-        //criar variavel e associar o componente de UI (editText)
-
         val edtPrice = findViewById<TextInputEditText>(R.id.fuel_price)
         val edtConsume = findViewById<TextInputEditText>(R.id.car_consumption)
         val edtDistance = findViewById<TextInputEditText>(R.id.distance)
         val btnCalculate = findViewById<Button>(R.id.btn_calculate)
 
         btnCalculate.setOnClickListener {
-            val price = edtPrice.text
-            val consume = edtConsume.text
-            val distance = edtDistance.text
-            println("Lucas" + price)
+            val price: Float = edtPrice.text.toString().toFloat()
+            val consume: Float = edtConsume.text.toString().toFloat()
+            val distance: Float = edtDistance.text.toString().toFloat()
+
+
+            val division = distance/consume
+            val total = division * price
+
+            println("Lucas" + total )
+
+            // Valor total de combustivel = (distance/consumption)*fuel price
+
 
         }
 
